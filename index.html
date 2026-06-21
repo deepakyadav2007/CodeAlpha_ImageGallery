@@ -3,34 +3,89 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Image Gallery</title>
-<link rel="stylesheet" href="style.css">
+<title>Aperture — A Photography Gallery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+ 
+</style>
 </head>
 <body>
 
-<h1>Responsive Image Gallery</h1>
+<header>
+  <div class="masthead">
+    <div class="brand">
+      <span class="mark" aria-hidden="true"></span>
+      <div>
+        <h1>Aperture</h1>
+        <div class="roll mono">Roll No. 014 — Est. 2026</div>
+      </div>
+    </div>
+    <nav class="meta mono">
+      24 Frames / 35mm<br>
+      Developed Selection
+    </nav>
+  </div>
 
-<div class="gallery">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763565/cld-sample-4.jpg" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763565/cld-sample-5.jpg" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763564/cld-sample-2.jpg    " alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763564/cld-sample.jpg" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763561/samples/coffee.jpg" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763561/samples/dessert-on-a-plate.jpg" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763566/main-sample.png" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763561/samples/cup-on-a-table.jpg" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763565/cld-sample-3.jpg" alt="">
-    <img src="https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763555/samples/balloons.jpg" alt="">
+  <div class="hero-title">
+    <div class="eyebrow mono">Curated Collection</div>
+    <h2>A quiet study<br><em>in light &amp; structure.</em></h2>
+    <p class="hero-sub mono">A contact sheet of twenty-four frames — landscape, architecture, portrait, and street — printed for browsing, not scrolling.</p>
+  </div>
+</header>
 
+<div class="filter-bar" role="toolbar" aria-label="Filter gallery by category">
+  <button class="filter-btn active" data-filter="all">All <span class="n">24</span></button>
+  <button class="filter-btn" data-filter="landscape">Landscape <span class="n">6</span></button>
+  <button class="filter-btn" data-filter="architecture">Architecture <span class="n">6</span></button>
+  <button class="filter-btn" data-filter="portrait">Portrait <span class="n">6</span></button>
+  <button class="filter-btn" data-filter="street">Street <span class="n">6</span></button>
+  <span class="count mono"><span id="visible-count">24</span> visible</span>
 </div>
 
-<div class="lightbox" id="lightbox">
-    <span class="close">&times;</span>
-    <button class="prev">&#10094;</button>
-    <img id="lightbox-img">
-    <button class="next">&#10095;</button>
+<main class="gallery-wrap">
+  <div class="gallery" id="gallery"></div>
+</main>
+
+<footer>
+  <span>© 2026 Aperture Studio</span>
+  <span>Click any frame, or press <strong style="color:var(--neg)">&larr; &rarr;</strong> once open</span>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lbClose" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+  </button>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Previous image">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <div class="lightbox-stage">
+    <div class="lightbox-frame" id="lbFrame">
+      <img id="lbImg" src="" alt="">
+    </div>
+  </div>
+  <button class="lb-nav next" id="lbNext" aria-label="Next image">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+
+  <div class="lightbox-caption" id="lbCaption">
+    <div class="frame-no mono" id="lbTag"></div>
+    <h3 id="lbTitle"></h3>
+    <p id="lbDesc"></p>
+  </div>
+
+  <div class="lb-counter">
+    <span id="lbCount">01 / 24</span>
+    <span class="bar"><i id="lbBar" style="width:4%"></i></span>
+  </div>
 </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
+
+
+
 </body>
 </html>
