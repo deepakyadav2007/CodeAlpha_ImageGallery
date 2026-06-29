@@ -14,7 +14,7 @@
     { cat:"landscape",    title:"Ridge Line",                  img:"https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1200&q=80", size:"normal" },
     { cat:"architecture", title:"Stairwell No. 4",              img:"https://images.unsplash.com/photo-1481026469463-66327c86e544?w=1200&q=80", size:"normal" },
     { cat:"portrait",     title:"Window Light",                 img:"https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1200&q=80", size:"tall" },
-    { cat:"street",       title:"Rain on Glass",                 img:"https://images.unsplash.com/photo-1473625247510-8ceb1760488b?w=1200&q=80", size:"normal" },
+    { cat:"street",       title:"cup-on-a-able",                 img:"https://res.cloudinary.com/dfls5jdyc/image/upload/v1780763561/samples/cup-on-a-table.jpg", size:"normal" },
     { cat:"landscape",    title:"Fog Over Pines",                img:"https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=80", size:"wide" },
     { cat:"architecture", title:"Glass Curtain Wall",            img:"https://images.unsplash.com/photo-1486718448742-163732cd1544?w=1200&q=80", size:"normal" },
     { cat:"portrait",     title:"Quiet Interior",                img:"https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200&q=80", size:"normal" },
